@@ -1,0 +1,21 @@
+package structural.flyweight;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class Order {
+
+    private static Logger log = LoggerFactory.getLogger(Order.class);
+
+    private final int orderNumber;
+    private final Item item;
+
+    Order(int orderNumber, Item item) {
+        this.orderNumber = orderNumber;
+        this.item = item;
+    }
+
+    void processOrder() {
+        log.info("Ordering {} for order number {}", item, orderNumber);
+    }
+}
